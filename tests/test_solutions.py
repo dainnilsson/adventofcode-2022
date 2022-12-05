@@ -30,7 +30,7 @@ def solution(day):
         pytest.skip("No input")
 
     with open(in_f) as f:
-        data = f.read().strip()
+        data = f.read()
 
     module = importlib.import_module("solutions.day%d" % day)
     solver = module.solve(data, lambda *_: None)
